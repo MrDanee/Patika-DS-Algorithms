@@ -1,0 +1,21 @@
+//Question 1 "flatten"
+
+x=[[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+new = []
+def flatten(data):
+    for i in data:
+        if type(i) == list:
+            flatten(i)
+        else:
+            new.append(i)
+flatten(x)
+print(new)
+
+//Question 2 "reverse"
+
+y=[[1, 2], [3, 4], [5, 6, 7]]
+
+y=[elem[::-1] for elem in y][::-1]
+
+
+print(y)
